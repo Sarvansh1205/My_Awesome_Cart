@@ -1,0 +1,74 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} Contact Us - My Awesome Cart{% endblock %}
+
+{% block css %} 
+
+body{
+    background-color: lightgrey;
+}
+.form-control{
+    background-color: #c6c6c6;
+}
+.form-select{
+    background-color: #c6c6c6;
+}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+    <h1 class="my-3">Contact Us</h1>
+    <form class="row g-3" action="/shop/contact/" method="post">{% csrf_token %}
+
+        <div class="row g-3">
+            <label for="name"   class="form-label">Name</label>
+            <div class="col-md-12">
+                <input type="text" name="name"  class="form-control" placeholder="Name" aria-label="Name">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" name="email" class="form-control" id="email">
+        </div>
+        <div class="col-md-4">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password">
+        </div>
+        <div class="col-md-4">
+            <label for="mobile" class="form-label">Mobile No.</label>
+            <input type="tel" name="phone" class="form-control" id="mobile">
+        </div>
+
+        <div class="col-12">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" name="address" class="form-control" id="address" placeholder="1234 Main St...">
+        </div>
+
+        <div class="col-md-6">
+            <label for="city" class="form-label">City</label>
+            <input type="text" name="city" class="form-control" id="city">
+        </div>
+        <div class="col-md-4">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" id="inputstate">
+        </div>
+        <div class="col-md-2">
+            <label for="pin" class="form-label">Pin</label>
+            <input type="text" name="pin" class="form-control" id="pin">
+        </div>
+        <div class="form-group my-3">
+            <label for="desc">How May We Help You?</Label>
+            <textarea name="query" class="form-control my-2" id="desc" rows="8" placeholder="Leave your query here..."></textarea>
+        </div>
+
+        <div class="col-12 my-3" style="text-align: center;">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

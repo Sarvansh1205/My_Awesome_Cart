@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Django
+*.log
+local_settings.py
+
+# Database
+db.sqlite3
+db.sqlite3-journal
+
+# Environment variables
+.env
+.env.*
+
+# IDE / VS Code
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
